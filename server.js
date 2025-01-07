@@ -11,7 +11,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/" , (req , res)=>{
-    res.send("Hello World");
+    // res.send("Hello World");
+    res.status(200).json({
+        message : "nice one"
+    })
 })
 
 app.listen(port , ()  => {
